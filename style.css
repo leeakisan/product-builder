@@ -7,6 +7,13 @@
 
 body {
     font-family: sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
 }
 
 header {
@@ -17,6 +24,10 @@ header {
     left: 0;
     width: 100%;
     z-index: 100;
+}
+
+body.dark-mode header {
+    background-color: #222;
 }
 
 nav {
@@ -33,6 +44,10 @@ nav {
     color: #333;
 }
 
+body.dark-mode .logo a {
+    color: #fff;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
@@ -45,8 +60,16 @@ nav {
     transition: all 0.3s ease-in-out;
 }
 
+body.dark-mode .nav-links li a {
+    color: #fff;
+}
+
 .nav-links li a:hover {
     background-color: #f2f2f2;
+}
+
+body.dark-mode .nav-links li a:hover {
+    background-color: #444;
 }
 
 .burger {
@@ -59,6 +82,10 @@ nav {
     height: 3px;
     background-color: #333;
     margin: 5px;
+}
+
+body.dark-mode .burger div {
+    background-color: #fff;
 }
 
 main {
@@ -100,7 +127,7 @@ section {
     background-color: #555;
 }
 
-.about h2, .services h2, .contact h2 {
+.about h2, .services h2, .contact h2, .roulette h2 {
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -118,6 +145,10 @@ section {
     width: 300px;
     text-align: center;
     border-radius: 5px;
+}
+
+body.dark-mode .card {
+    background-color: #444;
 }
 
 .card h3 {
@@ -138,8 +169,22 @@ section {
     border-radius: 5px;
 }
 
+body.dark-mode .contact input, body.dark-mode .contact textarea {
+    background-color: #555;
+    border-color: #777;
+    color: #fff;
+}
+
 .contact button {
     align-self: flex-start;
+}
+
+.roulette {
+    text-align: center;
+}
+
+#roulette-canvas {
+    margin-bottom: 1rem;
 }
 
 footer {
@@ -147,6 +192,10 @@ footer {
     color: #fff;
     text-align: center;
     padding: 1rem;
+}
+
+body.dark-mode footer {
+    background-color: #222;
 }
 
 @media screen and (max-width: 768px) {
@@ -167,6 +216,10 @@ footer {
         background-color: #fff;
         width: 100%;
         padding: 1rem;
+    }
+
+    body.dark-mode .nav-active {
+        background-color: #222;
     }
 
     .nav-active li {
